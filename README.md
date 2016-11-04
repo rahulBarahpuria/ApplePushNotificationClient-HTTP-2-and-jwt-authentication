@@ -1,6 +1,6 @@
 # APNs-provider-server
 
-This will describe about how to connect with Apple Push Notification Server using the latest JWT authentication mechanism in HTTP/2 interface. In order to make an HTTP/2 client (in java), some third party libraries need to import as HTTP/2 support will come in jdk 1.9x whose date is 27/07/2017 (refer http://www.java9countdown.xyz/) . In this client code, these libraries (jar files) need to be imported and must be set in the build path of the project.
+This will describe about how to connect with Apple Push Notification Server using the latest JWT authentication mechanism in HTTP/2 interface. In order to make an HTTP/2 client (in java), some third party libraries need to import as HTTP/2 support in java will come in jdk 1.9x whose release date is 27/07/2017 (refer http://www.java9countdown.xyz/) . In this HTTP/2 client code, these libraries (jar files) need to be imported and must be set in the build path of the project.
 
 1. okhttp-3.3.1.jar
 2. json-simple-1.1.jar
