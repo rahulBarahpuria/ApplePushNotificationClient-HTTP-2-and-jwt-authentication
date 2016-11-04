@@ -18,21 +18,16 @@ import io.jsonwebtoken.Jwts;
 //import sun.misc.Request;
 import sun.security.ec.ECPrivateKeyImpl;
 public class GenerateJWTTokens {
-	static String BUNDLE_ID = "com.broadsoft.PushAppThrToken1";
-	static String DeviceToken = "6AF48D096D9457359B15A36EA103C2F636B8E8CA3483796A7F2B234057D5A5A9";
-	static ByteBuffer payload1;
-	
-
 	// creating jwt token for apple push notification
 	@SuppressWarnings("unchecked")
 	public String createJWT() throws Exception{
 		
 		 //The JWT signature algorithm we will be using to sign the token
 	    io.jsonwebtoken.SignatureAlgorithm signatureAlgorithm = io.jsonwebtoken.SignatureAlgorithm.ES256;
-	    String APNS_KEY_ID = "D36WVNTQHD";
-	    String APNS_AUTH_KEY = "C:/rahul/Working/APNsAuthKey_D36WVNTQHD1.p8";
-	    String TEAM_ID = "BEBBK3GU2Y";
-	    String path = "/3/device/"+DeviceToken;
+	    String APNS_KEY_ID = "N7QWVNASDE";
+	    String APNS_AUTH_KEY = "D:/path/to/AuthenticationKey.p8";
+	    String TEAM_ID = "SDERK5RT6U";
+	    
 	    BufferedReader br = null;
 	    String secret="";
 	    try{
@@ -56,20 +51,10 @@ public class GenerateJWTTokens {
 		JSONObject claims = new JSONObject();
 		claims.put("iss", TEAM_ID);
 		claims.put("iat", nowMillis);
-		JSONObject payload = new JSONObject();
-		payload.put("alert", "hello");
-		String q = "\"";
-		String s = payload.toString();
-		String s1 = "{"+q+"apns"+q+":"+s+"}";
-		Charset charset = Charset.forName("UTF-8");
-		CharsetEncoder encoder = charset.newEncoder();
-		payload1 = encoder.encode(CharBuffer.wrap(s1));
 		JwtBuilder token = Jwts.builder().setHeader(header)
 		    							 .setClaims(claims)
 			    						 .signWith(signatureAlgorithm, secret2);
-		
-		
-		
+	
 		return token.compact();
 			
 	}
