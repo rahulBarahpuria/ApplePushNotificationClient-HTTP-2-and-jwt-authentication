@@ -2,7 +2,7 @@ package com.rahul.okHttpClient;
 
 import org.json.simple.JSONObject;
 
-import com.broadsoft.rahul.testStuffs.GenerateJWTTokens;
+import com.rahul.testStuffs.GenerateJWTTokens;
 
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
@@ -13,7 +13,7 @@ import okhttp3.Response;
 public class Http2ApnsClient {
 	
 	public static final String BUNDLE_ID = "com.company.application";
-	public static final String DEVICE_TOKEN = "6AF48D096D9457359B15A36EA103C2F636B8E8CA3483796A7F2B234057D5A5A9";
+	public static final String DEVICE_TOKEN = "7YU68D096D9457359B65R436EA103C2F636H7U6CA3483796A7F2B234057D5SDFR";
 	public static final String APNS_ID = "eabeae54-14a8-11e5-b60b-1697f925ec7b";
 	public static final String HOST = "api.development.push.apple.com";
 	public static final int PORT = 443;
