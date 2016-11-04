@@ -12,4 +12,4 @@ This will describe about how to connect with Apple Push Notification Server usin
 8. jjwt-0.4-sources.jar
 9. jjwt-0.6.0.jar
 
-An athentication key need to be downloaded from Apple's developer (paid) account. That auth key will be a key.p8 file. The push notification server will make a secure connection to APNs using JWT tokens signed by the auth key downloaded from Apple's developer (paid) account.
+An authentication key need to be downloaded from Apple's developer (paid) account. That auth key will be a key.p8 file. The push notification server will make a secure connection to APNs using JWT tokens signed by the auth key downloaded from Apple's developer (paid) account. Also, don't forget to set the Xboot class path to alpn-boot-8.1.9.v20160720.jar file in the VM arguments in run configurations and USE JDK 1.8x as lower versions of java will not support.
